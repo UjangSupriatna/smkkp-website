@@ -99,7 +99,7 @@ export default function Footer() {
                 <Facebook className="w-4 h-4" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/official.smkkaryapermata_"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-gray-800 hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors"
@@ -198,8 +198,8 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-gray-500 text-sm text-center md:text-left">
+          <div className="flex items-center justify-between">
+            <p className="text-gray-500 text-sm">
               &copy; {new Date().getFullYear()} SMK Karya Permata Rancaekek. Hak
               cipta dilindungi undang-undang.
             </p>
