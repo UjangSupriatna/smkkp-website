@@ -155,7 +155,7 @@ export default function AboutSection() {
               Sekolah Kejuruan Terpercaya di{" "}
               <span className="text-blue-700">Rancaekek</span>
             </h3>
-            <div className="space-y-4 text-gray-600 leading-relaxed">
+            <div className="space-y-4 text-gray-700 leading-relaxed">
               <p>
                 SMK Karya Permata didirikan pada tanggal 7 Mei 2009 dan mulai
                 beroperasi secara resmi pada 13 Mei 2011. Sekolah ini berlokasi
