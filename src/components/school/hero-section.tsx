@@ -106,7 +106,7 @@ export default function HeroSection() {
               size="lg"
               variant="outline"
               onClick={() => handleScroll("#profil")}
-              className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-semibold px-8 py-6 text-base transition-all"
+              className="border-2 border-white text-blue-950 hover:bg-white hover:text-blue-900 font-semibold px-8 py-6 text-base transition-all"
             >
               Profil Sekolah
             </Button>
