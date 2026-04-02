@@ -100,9 +100,9 @@ function AnimatedCounter({
   }, [target, duration, hasAnimated]);
 
   return (
-    <div ref={ref} className="text-4xl md:text-5xl font-bold text-gray-900">
+    <div ref={ref} className="text-4xl md:text-5xl font-bold text-white">
       {count.toLocaleString()}
-      <span className="text-blue-600">{suffix}</span>
+      <span className="text-blue-300">{suffix}</span>
     </div>
   );
 }
@@ -182,7 +182,7 @@ export default function StatsSection() {
                 suffix={stat.suffix}
               />
               <p className="text-white font-semibold mt-2 mb-1">{stat.label}</p>
-              <p className="text-blue-300/60 text-sm">
+              <p className="text-blue-200/80 text-sm">
                 {stat.description}
               </p>
             </motion.div>
