@@ -199,13 +199,13 @@ export default function AboutSection() {
                 {item.title}
               </h4>
               {item.description ? (
-                <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                <p className="text-gray-700 leading-relaxed">{item.description}</p>
               ) : (
                 <ul className="space-y-2">
                   {item.items?.map((text, i) => (
                     <li
                       key={i}
-                      className="flex items-start gap-2 text-gray-600 text-sm"
+                      className="flex items-start gap-2 text-gray-700 text-sm"
                     >
                       <CheckCircle className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
                       <span>{text}</span>
