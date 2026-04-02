@@ -165,19 +165,19 @@ export default function ContactSection() {
               </div>
             ))}
 
-            {/* Map placeholder */}
+            {/* Google Maps Embed */}
             <div className="rounded-xl overflow-hidden border border-gray-200 shadow-sm mt-6">
-              <div className="bg-blue-50 h-48 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-                  <p className="text-blue-700 font-medium text-sm">
-                    Lokasi SMK Karya Permata
-                  </p>
-                  <p className="text-blue-600/70 text-xs">
-                    Jl. Raya Talun No. 51, Rancaekek
-                  </p>
-                </div>
-              </div>
+              <iframe
+                src="https://maps.google.com/maps?q=SMK+Karya+Permata+Rancaekek+Jl+Raya+Talun+No+51&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="200"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Lokasi SMK Karya Permata"
+                className="w-full"
+              />
             </div>
           </motion.div>
 
