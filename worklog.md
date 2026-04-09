@@ -31,3 +31,33 @@ Stage Summary:
 - Working contact form with WhatsApp integration and database backend
 - All images copied from original repo
 - Clean code with no lint errors, page compiles in ~2s
+
+---
+Task ID: 2
+Agent: Main Agent
+Task: Add Blog feature with 3 service articles (CCTV, Pintu Otomatis, Aplikasi/Website)
+
+Work Log:
+- Updated Prisma schema with BlogPost model (id, title, slug, excerpt, content, category, image, published, timestamps)
+- Pushed schema to database with db:push
+- Generated 3 AI images using z-ai image generation CLI (cctv-installation.jpg, automatic-door.jpg, web-app-development.jpg)
+- Created /api/blog API route with auto-seeding of 3 default blog posts on first request
+- Created BlogSection component with:
+  - Blog post cards with category badges, date, reading time
+  - Hover effects and Framer Motion animations
+  - Full article detail dialog with rendered markdown content
+  - Category-specific icons and color coding (Keamanan=red, Otomasi=amber, Teknologi=blue)
+  - CTA to contact form from blog detail
+- Updated Navbar navLinks to include Blog (#blog)
+- Updated page.tsx to include BlogSection between StatsSection and ContactSection
+- Ran ESLint - passed with no errors
+- Verified blog API returns 200 and seeds 3 posts correctly
+
+Stage Summary:
+- Blog feature fully functional with 3 articles: Jasa Pemasangan CCTV, Pintu Otomatis, Aplikasi & Website Custom
+- Blog posts stored in SQLite database with Prisma ORM
+- Auto-seeding on first API call (upsert pattern prevents duplicates)
+- AI-generated images for all 3 blog posts
+- Beautiful card layout with category badges and hover animations
+- Full article reading in a Dialog modal with formatted content
+- Navigation updated with Blog link

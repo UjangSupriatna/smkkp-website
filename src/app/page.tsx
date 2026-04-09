@@ -5,6 +5,7 @@ import HeroSection from "@/components/school/hero-section";
 import AboutSection from "@/components/school/about-section";
 import ProgramsSection from "@/components/school/programs-section";
 import StatsSection from "@/components/school/stats-section";
+import BlogSection from "@/components/school/blog-section";
 import ContactSection from "@/components/school/contact-section";
 import Footer from "@/components/school/footer";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <AboutSection />
         <ProgramsSection />
         <StatsSection />
+        <BlogSection />
         <ContactSection />
       </main>
       <Footer />

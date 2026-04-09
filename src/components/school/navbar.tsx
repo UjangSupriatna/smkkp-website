@@ -16,6 +16,7 @@ const navLinks = [
   { label: "Profil", href: "#profil" },
   { label: "Program Keahlian", href: "#program" },
   { label: "Prestasi", href: "#prestasi" },
+  { label: "Blog", href: "#blog" },
   { label: "Kontak", href: "#kontak" },
 ];
 
