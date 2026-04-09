@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
-import { db } from "@/lib/db";
 
-const DEFAULT_POSTS = [
+const blogPosts = [
   {
+    id: "1",
     title: "Jasa Pemasangan CCTV Profesional",
     slug: "jasa-pemasangan-cctv",
     excerpt:
@@ -31,11 +31,15 @@ Keamanan merupakan aspek yang tidak bisa diabaikan, baik untuk rumah tinggal, ka
 ### Area Layanan
 
 Kami melayani pemasangan CCTV di wilayah Rancaekek, Kabupaten Bandung, dan sekitarnya. Hubungi kami sekarang untuk konsultasi gratis!
-    `,
+    `.trim(),
     category: "Keamanan",
     image: "/images/blog/cctv-installation.jpg",
+    published: true,
+    createdAt: "2026-04-09T00:00:00.000Z",
+    updatedAt: "2026-04-09T00:00:00.000Z",
   },
   {
+    id: "2",
     title: "Jasa Pemasangan Pintu Otomatis",
     slug: "jasa-pemasangan-pintu-otomatis",
     excerpt:
@@ -64,11 +68,15 @@ Pintu otomatis menjadi investasi penting untuk meningkatkan efisiensi, keamanan,
 ### Area Layanan
 
 Kami melayani pemasangan pintu otomatis di Rancaekek, Bandung, dan sekitarnya. Konsultasikan kebutuhan Anda dengan tim kami sekarang!
-    `,
+    `.trim(),
     category: "Otomasi",
     image: "/images/blog/automatic-door.jpg",
+    published: true,
+    createdAt: "2026-04-09T00:00:00.000Z",
+    updatedAt: "2026-04-09T00:00:00.000Z",
   },
   {
+    id: "3",
     title: "Jasa Pembuatan Aplikasi & Website Custom",
     slug: "jasa-pembuatan-aplikasi-website",
     excerpt:
@@ -113,47 +121,15 @@ Di era digital saat ini, kehadiran online bukan lagi sekadar pilihan, melainkan 
 6. **Maintenance** — Support teknis berkelanjutan
 
 Hubungi kami untuk konsultasi dan dapatkan penawaran terbaik!
-    `,
+    `.trim(),
     category: "Teknologi",
     image: "/images/blog/web-app-development.jpg",
+    published: true,
+    createdAt: "2026-04-09T00:00:00.000Z",
+    updatedAt: "2026-04-09T00:00:00.000Z",
   },
 ];
 
-async function seedBlogPosts() {
-  for (const post of DEFAULT_POSTS) {
-    await db.blogPost.upsert({
-      where: { slug: post.slug },
-      update: {
-        title: post.title,
-        excerpt: post.excerpt,
-        content: post.content,
-        category: post.category,
-        image: post.image,
-      },
-      create: post,
-    });
-  }
-}
-
 export async function GET() {
-  try {
-    // Seed default posts if empty
-    const existingCount = await db.blogPost.count();
-    if (existingCount === 0) {
-      await seedBlogPosts();
-    }
-
-    const posts = await db.blogPost.findMany({
-      where: { published: true },
-      orderBy: { createdAt: "desc" },
-    });
-
-    return NextResponse.json({ success: true, posts });
-  } catch (error) {
-    console.error("Error fetching blog posts:", error);
-    return NextResponse.json(
-      { error: "Gagal mengambil data blog" },
-      { status: 500 }
-    );
-  }
+  return NextResponse.json({ success: true, posts: blogPosts });
 }
